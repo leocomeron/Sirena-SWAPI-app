@@ -11,5 +11,8 @@
 }
 
 .title {
-  margin-left: 50;
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Starjedi";
 }

@@ -6,14 +6,14 @@ import Details from "./components/CharacterDetails";
 import Characters from "./components/Characters";
 import Movies from "./components/Movies";
 import MovieDetails from "./components/MovieDetails";
-import { ThemeProvider, createTheme, styled } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material";
 
 const theme = createTheme({
   typography: {
-    fontSize: 12,
-    "@media (min-width:600px)": {
-      fontSize: 14,
+    "@media and screen (max-width: 600px)": {
+      fontSize: 6,
     },
+    fontSize: 8,
   },
 });
 
@@ -24,7 +24,7 @@ function App() {
 
   return (
     <Fragment>
-      <p className="title">Hola fanáticos de StarWars</p>
+      <div className="title">Hola fanáticos de StarWars</div>
       <div className="App">
         <ThemeProvider theme={theme}>
           <Category />
@@ -35,7 +35,8 @@ function App() {
         </ThemeProvider>
       </div>
       <img
-        src={"http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG3.png"}
+        src="http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG3.png"
+        alt="Star Wars Icon"
         className="img"
       ></img>
     </Fragment>

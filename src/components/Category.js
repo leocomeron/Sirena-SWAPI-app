@@ -11,8 +11,7 @@ import { characterActions } from "../store/character";
 const style = {
   width: "20%",
   maxWidth: 360,
-  minWidth: 100,
-  fontWeight: 20,
+  minWidth: 80,
 };
 const buttonStyle = {
   "&:hover": {

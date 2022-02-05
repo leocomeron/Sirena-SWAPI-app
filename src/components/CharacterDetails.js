@@ -10,10 +10,11 @@ import axios from "axios";
 
 const style = {
   width: "100%",
-  maxWidth: 400,
+  maxWidth: 600,
+  minWidth: 120,
 };
 const buttonStyle = {
-  paddingLeft: 6,
+  paddingLeft: 5,
   "&:hover": {
     backgroundColor: "#444444",
   },

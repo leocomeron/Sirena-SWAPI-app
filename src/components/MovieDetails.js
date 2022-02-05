@@ -6,6 +6,7 @@ import ListItemText from "@mui/material/ListItemText";
 const style = {
   width: "100%",
   maxWidth: 600,
+  minWidth: 120,
 };
 
 const Details = () => {
