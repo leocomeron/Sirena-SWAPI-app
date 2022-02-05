@@ -3,6 +3,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import { useDispatch, useSelector } from "react-redux";
 import { categoryActions } from "../store/category";
 import { movieActions } from "../store/movie";
@@ -35,6 +36,7 @@ const Sidebar = () => {
         }}
       >
         <ListItemText primary="Personajes" />
+        {category.category === "people" && <ArrowRightIcon />}
       </ListItem>
       <Divider />
       <ListItem
@@ -48,6 +50,7 @@ const Sidebar = () => {
         }}
       >
         <ListItemText primary="Películas" />
+        {category.category === "films" && <ArrowRightIcon />}
       </ListItem>
     </List>
   );

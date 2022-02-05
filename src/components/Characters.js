@@ -3,6 +3,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import { useDispatch, useSelector } from "react-redux";
 import { characterActions } from "../store/character";
 import { movieActions } from "../store/movie";
@@ -26,6 +27,7 @@ const buttonStyle = {
 
 const Characters = () => {
   const category = useSelector((state) => state.category);
+  const character = useSelector((state) => state.character);
   const dispatch = useDispatch();
 
   const [data, setData] = useState([]);
@@ -63,8 +65,7 @@ const Characters = () => {
     fetchData();
   }, [category]);
 
-  // CREATE AN ARRAY OF UNIQUE EYES COLOR, THEN I USED IT IN CharacterDetails, to translate eyes color //
-
+  // CREATE AN ARRAY OF UNIQUE EYES COLOR, THEN I USED IT IN CharacterDetails.js, to translate eyes color to spanish//
   //  let eyesColor = [];
   // const character = useSelector((state) => state.character);
   // data.map((character) => {
@@ -97,6 +98,7 @@ const Characters = () => {
                     }}
                   >
                     <ListItemText primary={person.name} />
+                    {character.character === person && <ArrowRightIcon />}
                   </ListItem>
                   <Divider />
                 </div>

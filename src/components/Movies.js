@@ -3,6 +3,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import { useDispatch, useSelector } from "react-redux";
 import { movieActions } from "../store/movie";
 import LoadingCircle from "./UI/LoadingCircle";
@@ -79,6 +80,7 @@ const Names = () => {
                     }}
                   >
                     <ListItemText primary={film.title} />
+                    {movie.movie === film && <ArrowRightIcon />}
                   </ListItem>
                   <Divider />
                 </div>
