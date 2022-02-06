@@ -12,7 +12,7 @@ import axios from "axios";
 
 const style = {
   width: "100%",
-  maxWidth: 300,
+  maxWidth: 200,
   minWidth: 100,
 };
 const buttonStyle = {
@@ -37,14 +37,12 @@ const Names = () => {
 
   let page = `https://swapi.dev/api/films/`;
 
-  console.log(movie);
   const fetchData = async () => {
     setIsLoading(true);
     await axios
       .get(page)
       .then(function (response) {
         setData(response.data.results);
-        console.log(response.data.results);
       })
       .catch(function (error) {
         console.log(error);

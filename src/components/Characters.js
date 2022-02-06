@@ -14,7 +14,7 @@ import axios from "axios";
 
 const style = {
   width: "100%",
-  maxWidth: 300,
+  maxWidth: 200,
   minWidth: 100,
   maxHeight: 500,
   overflow: "auto",

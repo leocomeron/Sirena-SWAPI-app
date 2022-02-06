@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { movieActions } from "../store/movie";
 import { characterActions } from "../store/character";
-import { categoryActions } from "../store/category";
+import { Typography } from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
@@ -85,7 +85,13 @@ const Details = () => {
     <div>
       <List sx={style} component="nav" aria-label="mailbox folders">
         <ListItem>
-          <ListItemText primary={`Nombre: ${character.character.name}`} />
+          <ListItemText
+            primary={
+              <Typography variant="h5">
+                {`Nombre: ${character.character.name}`}
+              </Typography>
+            }
+          />
         </ListItem>
         <ListItem>
           <ListItemText

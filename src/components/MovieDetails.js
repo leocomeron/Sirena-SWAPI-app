@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import List from "@mui/material/List";
+import { Typography } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 
@@ -16,7 +17,13 @@ const Details = () => {
     <div>
       <List sx={style} component="nav" aria-label="mailbox folders">
         <ListItem>
-          <ListItemText primary={`Título: ${movie.movie.title}`} />
+          <ListItemText
+            primary={
+              <Typography variant="h5" style={{ fontWeight: "bold" }}>
+                {`Título: ${movie.movie.title}`}
+              </Typography>
+            }
+          />
         </ListItem>
         <ListItem>
           <ListItemText primary={`Director: ${movie.movie.director}`} />
