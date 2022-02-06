@@ -16,7 +16,7 @@ const style = {
   width: "100%",
   maxWidth: 200,
   minWidth: 100,
-  maxHeight: 500,
+  maxHeight: 450,
   overflow: "auto",
 };
 const buttonStyle = {

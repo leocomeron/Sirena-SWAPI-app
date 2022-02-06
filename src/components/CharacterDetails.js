@@ -21,6 +21,7 @@ const buttonStyle = {
   },
 };
 
+//create two dummy variables to translate eyes color
 const DUMMY_EYESCOLOR = [
   "blue",
   "yellow",
@@ -87,7 +88,7 @@ const Details = () => {
         <ListItem>
           <ListItemText
             primary={
-              <Typography variant="h5">
+              <Typography variant="h5" style={{ fontWeight: "bold" }}>
                 {`Nombre: ${character.character.name}`}
               </Typography>
             }
@@ -106,7 +107,11 @@ const Details = () => {
           <ListItemText primary={`Altura: ${character.character.height} cm`} />
         </ListItem>
         <ListItem>
-          <ListItemText primary={`Peso: ${character.character.mass} kg`} />
+          {(character.character.mass === "unknown" && (
+            <ListItemText primary={`Peso: desconocido`} />
+          )) || (
+            <ListItemText primary={`Peso: ${character.character.mass} kg`} />
+          )}
         </ListItem>
         <ListItem>
           <ListItemText primary="Peliculas en las que apareció:" />
